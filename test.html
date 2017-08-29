@@ -8,7 +8,14 @@
 
 <h1>Работа с массивами</h1>
 
+<p id = 'result'></p>
+
 <script>
+
+	function printToDoom(s){
+		s = s.toString() + "<br>";
+		document.getElementById('result').innerHTML += s;
+	}
 
 	function printMass(mass){
 		const n = mass.length;
@@ -17,6 +24,7 @@
 			s = s + mass[i] + " ";
 		}
 		console.log(s);
+		printToDoom(s);
 	}
 
 
