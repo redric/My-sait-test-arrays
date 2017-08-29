@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Работа с массивами</title>
+</head>
+<body>
+
+<h1>Работа с массивами</h1>
+
+<script>
+
+	function printMass(mass){
+		const n = mass.length;
+		let s = "";
+		for(let i = 0; i < n; i++){
+			s = s + mass[i] + " ";
+		}
+		console.log(s);
+	}
+
+
+	function sortMass(mass){
+		const n = mass.length;
+		for(let i = 0; i < n; i++){
+			for(let j = 0; j < n; j++){
+				if(mass[i] < mass[j]){
+					const x = mass[i];
+					mass[i] = mass[j];
+					mass[j] = x;	
+				}
+			}
+		}
+	}
+
+	let arr = [10,5,18,56,9,15];
+	console.log("Изначальный массив");
+	printMass(arr);
+	sortMass(arr);
+	console.log("Отсортированный массив");
+	printMass(arr);
+</script>
+
+
+</body>
+</html>
